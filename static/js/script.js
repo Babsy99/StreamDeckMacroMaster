@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.getElementById('result');
     const generatedScript = document.getElementById('generated-script');
     const copyButton = document.getElementById('copy-button');
+    const toggleGuidanceButton = document.getElementById('toggle-guidance');
+    const guidanceContent = document.getElementById('guidance-content');
+
+    toggleGuidanceButton.addEventListener('click', () => {
+        guidanceContent.classList.toggle('hidden');
+    });
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();

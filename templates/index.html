@@ -9,6 +9,33 @@
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 class="text-2xl font-bold mb-6 text-center">Stream Deck Macro Generator</h1>
+        
+        <!-- Guidance Section -->
+        <div class="mb-6">
+            <button id="toggle-guidance" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2">
+                Toggle Guidance
+            </button>
+            <div id="guidance-content" class="hidden bg-blue-50 p-4 rounded-md text-sm">
+                <h3 class="font-bold mb-2">File Path Target:</h3>
+                <ul class="list-disc pl-5 mb-2">
+                    <li>"Open File": Enter the full file path to the file you want to open.</li>
+                    <li>"Run Command": Leave blank or enter "N/A" if the command doesn't require a specific file path.</li>
+                    <li>"Key Press": Leave blank or enter "N/A" as it's not relevant for key presses.</li>
+                </ul>
+                <h3 class="font-bold mb-2">Macro Action:</h3>
+                <ul class="list-disc pl-5 mb-2">
+                    <li>"Open File": Leave this blank, as the file path is specified in the File Path Target field.</li>
+                    <li>"Run Command": Enter the full command you want to execute, e.g., "start spotify:" or "notepad.exe".</li>
+                    <li>"Key Press": Enter the key or key combination you want to simulate, e.g., "ctrl+c" for copy or "f5" for refresh.</li>
+                </ul>
+                <h3 class="font-bold mb-2">Additional Tips:</h3>
+                <ul class="list-disc pl-5">
+                    <li>Always test your scripts in a safe environment before using them with your Stream Deck.</li>
+                    <li>For commands like opening Spotify, use "Run Command" with "start spotify:" as the Macro Action and leave File Path Target as "N/A".</li>
+                </ul>
+            </div>
+        </div>
+
         <form id="macro-form" class="space-y-4">
             <div>
                 <label for="macro-type" class="block text-sm font-medium text-gray-700">Macro Type:</label>
