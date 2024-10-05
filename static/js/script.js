@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const filePath = document.getElementById('file-path').value;
         const macroAction = document.getElementById('macro-action').value;
+        const macroType = document.getElementById('macro-type').value;
 
         try {
             const response = await fetch('/generate_script', {
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ filePath, macroAction }),
+                body: JSON.stringify({ filePath, macroAction, macroType }),
             });
 
             if (!response.ok) {
